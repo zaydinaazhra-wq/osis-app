@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('osis_classes', function (Blueprint $table) {
+        Schema::create('osis_departements', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
             $table->string('name');
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('osis_classes');
+        Schema::dropIfExists('osis_departements');
     }
 };
